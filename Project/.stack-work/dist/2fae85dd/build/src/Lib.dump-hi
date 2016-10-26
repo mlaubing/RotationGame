@@ -1,0 +1,374 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-26 11:14:24.7178972 UTC
+
+interface Project-0.1.0.0-BQAUV2G50M66dry8GmjFk1:Lib 8001
+  interface hash: 90cc152cdda72acb0f2390b789f9d8df
+  ABI hash: c7bf2f05c3492e75f0015f52a3dab8d9
+  export-list hash: d03836fdc1c37b4b16a7a6ffb56c0e1e
+  orphan hash: c6cb5256080e0e574477474168a7049d
+  flag hash: db5429e44f4d589be9142049ae48b102
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lib.createMapIndices
+  Lib.createString
+  Lib.formatString
+  Lib.getRow
+  Lib.loop
+  Lib.randomPositions
+module dependencies:
+package dependencies: Win32-2.3.1.1@Win32-2.3.1.1
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.0.0*
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 random-1.1@random-1.1-54KmMHXjttlERYcr1mvsAe*
+                      time-1.6.0.1@time-1.6.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable d40d70990c96ce5d83ac87c2f0bea9d9
+import  -/  base-4.9.0.0:Data.List def1f8b4f231319a5fe5907776accd7e
+import  -/  base-4.9.0.0:Data.OldList c1be4a1b7d25d5173b71e8796c770d06
+import  -/  base-4.9.0.0:Data.Tuple 93ba93ac347f2d9f7bc6817c5982f3ac
+import  -/  base-4.9.0.0:GHC.Base f4d51a1fd479b72cfcf1a3615a73ed18
+import  -/  base-4.9.0.0:GHC.List 700d266f30fda528f6bf6512e56c3a1e
+import  -/  base-4.9.0.0:GHC.Num a3f182b4264cbaa3785683708453f276
+import  -/  base-4.9.0.0:GHC.Real 88ae6a4c965904566bf073403882ed95
+import  -/  base-4.9.0.0:GHC.Show 0f4f1b56cc1a8e3bb102cea90130c72c
+import  -/  base-4.9.0.0:Prelude eb1c3af8140de70083f65c44bbe8cb37
+import  -/  base-4.9.0.0:System.IO e455b88db70e2cb5187aabf2ec37eace
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 1a78f3e0bf56c661747b22b91e8b2976
+import  -/  ghc-prim-0.5.0.0:GHC.Types 01744bc20c1eebd74e75ad370a3c4290
+import  -/  random-1.1@random-1.1-54KmMHXjttlERYcr1mvsAe:System.Random 454eeea8e7038a6ae12449804e51dc8d
+b7bca2f1442f6c86262be3b5907e3261
+  $s$fEq(,) :: GHC.Classes.Eq (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt)
+                  (GHC.Classes.$fEq(,)_$c/=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt) -}
+10169489654e963f11c5d644e784c602
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
+cb1c3a702c5699501b44a5561c4159ac
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Lib"#) -}
+60c1e7d51f3f5f3f8c0eae354b6a0c76
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Project-0.1.0.0-BQAUV2G50M66dry8GmjFk1"#) -}
+617795339eb41eb6dcd199eaa32b4902
+  $wcreateMapIndices ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><S,U><L,1*U(U)><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int)
+                   (w1 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># ww ww1) of wild {
+                   GHC.Types.False
+                   -> case w of wild1 { GHC.Types.I# x ->
+                      case w1 of wild2 { GHC.Types.I# y ->
+                      let {
+                        lvl8 :: [GHC.Types.Int] = GHC.Enum.eftInt x y
+                      } in
+                      letrec {
+                        go :: GHC.Prim.Int# -> [(GHC.Types.Int, GHC.Types.Int)]
+                          {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x1 :: GHC.Prim.Int#) ->
+                          let {
+                            ds :: GHC.Types.Int {- Strictness: m -} = GHC.Types.I# x1
+                          } in
+                          let {
+                            z :: [(GHC.Types.Int, GHC.Types.Int)]
+                            = case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.==# x1 ww1) of wild3 {
+                                GHC.Types.False -> go (GHC.Prim.+# x1 1#)
+                                GHC.Types.True -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int) }
+                          } in
+                          letrec {
+                            go1 :: [GHC.Types.Int] -> [(GHC.Types.Int, GHC.Types.Int)]
+                              {- Arity: 1, Strictness: <S,1*U> -}
+                            = \ (ds1 :: [GHC.Types.Int]) ->
+                              case ds1 of wild3 {
+                                [] -> z
+                                : y1 ys
+                                -> GHC.Types.: @ (GHC.Types.Int, GHC.Types.Int) (ds, y1) (go1 ys) }
+                          } in
+                          go1 lvl8
+                      } in
+                      go ww } }
+                   GHC.Types.True
+                   -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int) }) -}
+afb90daf17e7720735947a6df6d8429f
+  $wgo :: System.Random.StdGen -> GHC.Prim.Int# -> [GHC.Types.Int]
+  {- Arity: 2, Strictness: <L,U><S,1*U>, Inline: [0] -}
+d1825e5ced6f93bf61369e0b84e2269d
+  $wrandomPositions ::
+    System.Random.StdGen
+    -> System.Random.StdGen
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 4, Strictness: <L,U><L,U><S,U><L,U(U)>, Inline: [0],
+     Unfolding: (\ (w :: System.Random.StdGen)
+                   (w1 :: System.Random.StdGen)
+                   (ww :: GHC.Prim.Int#)
+                   (w2 :: GHC.Types.Int) ->
+                 letrec {
+                   go :: [GHC.Types.Int]
+                         -> [GHC.Types.Int] -> [(GHC.Types.Int, GHC.Types.Int)]
+                     {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
+                   = \ (ds :: [GHC.Types.Int]) (eta :: [GHC.Types.Int]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int)
+                       : y ys
+                       -> case eta of wild1 {
+                            [] -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int)
+                            : y1 ys1
+                            -> GHC.Types.:
+                                 @ (GHC.Types.Int, GHC.Types.Int)
+                                 (case ww of wild2 {
+                                    DEFAULT
+                                    -> case y of wild3 { GHC.Types.I# x ->
+                                       case GHC.Classes.modInt# x wild2 of ww2 { DEFAULT ->
+                                       GHC.Types.I# ww2 } }
+                                    -1# -> Lib.randomPositions1
+                                    0# -> case GHC.Real.divZeroError ret_ty GHC.Types.Int of {} },
+                                  y1)
+                                 (go ys ys1) } }
+                 } in
+                 go
+                   (Lib.$wrandomlist ww w)
+                   (letrec {
+                      go1 :: [GHC.Types.Int] -> [GHC.Types.Int]
+                        {- Arity: 1, Strictness: <S,1*U> -}
+                      = \ (ds :: [GHC.Types.Int]) ->
+                        case ds of wild {
+                          [] -> GHC.Types.[] @ GHC.Types.Int
+                          : y ys
+                          -> GHC.Types.:
+                               @ GHC.Types.Int
+                               (GHC.Real.$fIntegralInt_$cmod y w2)
+                               (go1 ys) }
+                    } in
+                    go1 (Lib.randomlist w2 w1))) -}
+5bf6466c0d9a1fb9bd849757dfa44aa2
+  $wrandomlist ::
+    GHC.Prim.Int# -> System.Random.StdGen -> [GHC.Types.Int]
+  {- Arity: 2, Strictness: <S,U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) (w :: System.Random.StdGen) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<# 0# ww) of wild {
+                   GHC.Types.False -> GHC.Types.[] @ GHC.Types.Int
+                   GHC.Types.True -> Lib.$wgo w ww }) -}
+32b10afb154c10970276efcbbe431837
+  createMapIndices ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(S),1*U(U)><S(S),1*U(U)><L,1*U(U)><L,1*U(U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: GHC.Types.Int) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { GHC.Types.I# ww3 ->
+                 Lib.$wcreateMapIndices ww1 ww3 w2 w3 } }) -}
+046c65eed4701b859ed5c68557d92522
+  createString ::
+    (GHC.Show.Show a, GHC.Num.Num a) =>
+    [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Base.String
+  {- Arity: 10, HasNoCafRefs, Strictness: <L,A><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   ($dNum :: GHC.Num.Num a)
+                   (eta :: [(GHC.Types.Int, GHC.Types.Int)])
+                   (eta1 :: GHC.Types.Int)
+                   (eta2 :: GHC.Types.Int)
+                   (eta3 :: GHC.Types.Int)
+                   (eta4 :: GHC.Types.Int)
+                   (eta5 :: (GHC.Types.Int, GHC.Types.Int))
+                   (eta6 :: (GHC.Types.Int, GHC.Types.Int))
+                   (eta7 :: [(GHC.Types.Int, GHC.Types.Int)]) ->
+                 Lib.createString_$screateString
+                   eta
+                   eta1
+                   eta2
+                   eta3
+                   eta4
+                   eta5
+                   eta6
+                   eta7) -}
+7bfae11139c42239a9c44471406639dc
+  createString_$screateString ::
+    [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Base.String
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <S,1*U><L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U(U),U(U))><L,U(U(U),U(U))><L,U> -}
+15690f3c156bab2af1271ec1b8ccb1e0
+  formatString :: [GHC.Base.String] -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+0fa08e5d5c64efbf627dc6d894fafa97
+  getRow ::
+    [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Types.Int -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U(U)>,
+     Unfolding: (\ (ls :: [(GHC.Types.Int, GHC.Types.Int)])
+                   (n :: GHC.Types.Int) ->
+                 letrec {
+                   go :: [(GHC.Types.Int, GHC.Types.Int)]
+                         -> [(GHC.Types.Int, GHC.Types.Int)]
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [(GHC.Types.Int, GHC.Types.Int)]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int)
+                       : y ys
+                       -> case y of wild1 { (,) x ds1 ->
+                          case x of wild2 { GHC.Types.I# x1 ->
+                          case n of wild3 { GHC.Types.I# y1 ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.==# x1 y1) of wild4 {
+                            GHC.Types.False -> go ys
+                            GHC.Types.True
+                            -> GHC.Types.:
+                                 @ (GHC.Types.Int, GHC.Types.Int)
+                                 wild1
+                                 (go ys) } } } } }
+                 } in
+                 go ls) -}
+04379b71d3ff9140da9db07196045f25
+  loop ::
+    [[(GHC.Types.Int, GHC.Types.Int)]]
+    -> [GHC.Base.String]
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.IO ()
+  {- Arity: 9,
+     Strictness: <L,U><L,U><L,1*U(U(U),U(U))><L,U(U(U),U(U))><L,U(U)><L,U(U)><L,U(U)><L,U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Lib.loop1
+                  `cast`
+                (<[[(GHC.Types.Int, GHC.Types.Int)]]>_R
+                 ->_R <[[GHC.Types.Char]]>_R
+                 ->_R <(GHC.Types.Int, GHC.Types.Int)>_R
+                 ->_R <(GHC.Types.Int, GHC.Types.Int)>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+a92c596120bcfe07fcf64bba85477464
+  loop1 ::
+    [[(GHC.Types.Int, GHC.Types.Int)]]
+    -> [[GHC.Types.Char]]
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 9,
+     Strictness: <L,U><L,U><L,1*U(U(U),U(U))><L,U(U(U),U(U))><L,U(U)><L,U(U)><L,U(U)><L,U(U)><S,U> -}
+684520d0e1b7243be6f5bf2c54959683
+  randomPositions ::
+    System.Random.StdGen
+    -> System.Random.StdGen
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 4, Strictness: <L,U><L,U><S(S),U(U)><L,U(U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: System.Random.StdGen)
+                   (w1 :: System.Random.StdGen)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: GHC.Types.Int) ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 Lib.$wrandomPositions w w1 ww1 w3 }) -}
+cc6e432c90ce0a684a77cc11d11253ba
+  randomPositions1 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 0#) -}
+c435264031b16d63c14f339529cea05e
+  randomlist ::
+    GHC.Types.Int -> System.Random.StdGen -> [GHC.Types.Int]
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: System.Random.StdGen) ->
+                 case w of ww { GHC.Types.I# ww1 -> Lib.$wrandomlist ww1 w1 }) -}
+"SPEC createString @ Integer" [ALWAYS] forall ($dShow :: GHC.Show.Show
+                                                           GHC.Integer.Type.Integer)
+                                              ($dNum :: GHC.Num.Num GHC.Integer.Type.Integer)
+  Lib.createString @ GHC.Integer.Type.Integer $dShow $dNum
+  = Lib.createString_$screateString
+"SPEC/Lib $fEq(,) @ Int @ Int" [ALWAYS] forall ($dEq :: GHC.Classes.Eq
+                                                          GHC.Types.Int)
+                                               ($dEq1 :: GHC.Classes.Eq GHC.Types.Int)
+  GHC.Classes.$fEq(,) @ GHC.Types.Int @ GHC.Types.Int $dEq $dEq1
+  = Lib.$s$fEq(,)
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
