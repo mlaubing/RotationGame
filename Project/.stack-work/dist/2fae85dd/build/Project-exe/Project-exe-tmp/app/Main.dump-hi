@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-10-25 16:37:06.0112652 UTC
+2016-10-28 09:03:45.1410721 UTC
 
 interface main@main:Main 8001
-  interface hash: 0030b194e156546b3b5bb55eb456e91e
-  ABI hash: eabb5f02ea0aec6da29a53a67977afb1
+  interface hash: 44392d313bc2687cc0bb58a76709100f
+  ABI hash: a3d7e7b8f67c59657075ca44017271cf
   export-list hash: 21804da3d5eadb99ae91162f05780e64
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: a7b89ab6382ce46850aa618c527c3158
@@ -31,7 +31,7 @@ family instance modules: base-4.9.0.0:Control.Applicative
                          base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
                          base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
                          base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
-import  -/  Project-0.1.0.0@Project-0.1.0.0-BQAUV2G50M66dry8GmjFk1:Lib c7bf2f05c3492e75f0015f52a3dab8d9
+import  -/  Project-0.1.0.0@Project-0.1.0.0-BQAUV2G50M66dry8GmjFk1:Lib c4436b04a16993ee46403999c6c9b071
 import  -/  base-4.9.0.0:GHC.IO.Handle 109a593fc49a4634c4c220b84516e807
 import  -/  base-4.9.0.0:GHC.IO.Handle.FD 3de9cd0bce44181341beffd8ff7eecc5
 import  -/  base-4.9.0.0:GHC.IO.Handle.Types cc8beb572ca2965f7d73978f77d1a6d8
@@ -57,12 +57,12 @@ b74ed801f73768b69b8a28fc8c618c44
     -> (# [(GHC.Types.Int, GHC.Types.Int)],
           [[(GHC.Types.Int, GHC.Types.Int)]] #)
   {- Arity: 1, Strictness: <L,U>, Inline: [0] -}
-9e3fbbe48f2be9044676fbb8d2f7529d
+94abaef2c4ed1d56037ace9b3f5de04f
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-5218fa0d0a3d3a604be128e09b2641d3
+786d337a8a493072835b24a075c687b9
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -82,9 +82,7 @@ b74ed801f73768b69b8a28fc8c618c44
                    Main.main_c
                    Main.main_p
                    Main.main_t
-                   Main.main_xstart
                    Main.main_xend
-                   Main.main_xstart
                    Main.main_yend
                    ipv2 } }) -}
 02856c127acfc90c98a046552aba725c
@@ -99,7 +97,7 @@ b74ed801f73768b69b8a28fc8c618c44
 06eb285a598766a581fc626adc1f9b46
   main5 :: GHC.Base.String
   {- Unfolding: (Lib.formatString Main.main_c) -}
-f7b21428e3600417fe816c3974a57918
+9e08a13357a60ffbb80f67b650b8ba63
   main6 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -128,9 +126,6 @@ d6d080387bd1f165d1c595b7a908b63a
 0ddbc11269b9a17aea083a05c3329b58
   main_xend :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 20#) -}
-36ea6e08fe7fe0d6fbb49093adc14d94
-  main_xstart :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
 ee62cde0c80b1910cb9edec7a9941319
   main_yend :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 27#) -}
