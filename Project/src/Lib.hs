@@ -3,31 +3,36 @@ module Lib
 	  createString,
 	  getRow,
 	  formatString,
-	  loop,
-	  randomPositions
+	  loop
     ) where
 	
 import Data.List (transpose, reverse, unfoldr)
 import System.Random
 	
-createMapIndices :: Int -> Int -> Int -> Int -> [(Int, Int)]
-createMapIndices xstart xend ystart yend = [(x,y) | x <- [xstart..xend], y <- [ystart..yend]]
+createMapIndices :: Int -> Int -> [(Int, Int)]
+createMapIndices xend yend = [(x,y) | x <- [0..xend], y <- [0..yend]]
 
-createString :: (Show a, Num a) => [(Int, Int)] -> Int -> Int -> Int -> Int -> (Int, Int) -> (Int, Int) -> [(Int, Int)] -> String
-createString ls xstart xend ystart yend player target walls = [ 
-                                                          if (fst t == fst player && snd t == snd player)
-														  then 'O' 
-													      else if (fst t == xstart || fst t == xend || snd t == ystart || snd t == yend) 
-														       || (fst t `mod` 2 == 0 && snd t `mod` 2 == 0) 
-														       || (t `elem` walls)
-													           then 'W'
-														       else if (fst target == fst t && snd t == snd target)
-															      then 'X'
-																  else ' '
-													   | t <- ls]
+createString :: (Show a, Num a) => [(Int, Int)] -> Int -> Int -> (Int, Int) -> (Int, Int) -> [(Int, Int)] -> String
+createString ls xend yend player target walls = [ (getObjectChar t xend yend walls target player) | t <- ls]
+                                               
+getObjectChar pos xend yend walls target player
+  | (posx == px && posy == py)                               = 'O'
+  | (posx == tx && posy == ty)                               = 'X'
+  | (posx == 0 || posx == xend || posy == 0 || posy == yend)
+    || (posx `mod` 3 == 0 && posy `mod` 3 == 0)             
+    || (pos `elem` walls)                                    = 'W'
+  | otherwise                                                = ' '
+  where posx = fst pos
+        posy = snd pos
+        px   = fst player
+        py   = snd player
+        tx   = fst target
+        ty   = snd target
 
 getRow :: [(Int, Int)] -> Int -> [(Int, Int)]
 getRow ls n = [ l | l <- ls, fst l == n]
+
+buildMapList xend yend = [getRow (createMapIndices xend yend) n | n <- [0..xend]]
 
 --transposeMap :: [a] -> [a]
 transposeMap map = transpose map
@@ -79,19 +84,31 @@ randomPositions g1 g2 n m = zip [e `mod` n | e <- randomlist n g1] [e `mod` m | 
 randomlist :: Int -> StdGen -> [Int]
 randomlist n = take n . unfoldr (Just . random)
 
+spawnaroundplayer player gen = [ls !! (e `mod` 8) | e <- (randomlist 3 gen)]
+    where posx = fst player
+          posy = snd player
+          ls = [(posx+1, posy),
+                (posx-1, posy),
+                (posx+1, posy+1),
+                (posx-1, posy-1),
+                (posx-1, posy+1),
+                (posx+1, posy-1),
+                (posx,posy+1),
+                (posx,posy-1)]
+
 --findPlayer :: [String] -> (Int, Int)
 --findPlayer map rows = [a | a <- (zip [0..rows] [if e == [] then 0 else e !! 0 | e <- [elemIndices 'O' l | l <- map]]), snd a /= 0] !! 0
 
 --loop :: [(Int, Int)] -> [String] -> (Int, Int) -> IO()
-loop indMap map p t xstart xend ystart yend = do
+loop indMap map p t xend yend = do
 	putStr "Move 'r', 'l', 'h', 'v': " 
 	inp <- readLn :: IO Char
 	g1 <- newStdGen
 	g2 <- newStdGen
-	let walls = take ((xend+yend)*xend) (randomPositions g1 g2 xend yend)
 	let nextPos = temporarilyNewPosition p inp
+	let walls = (take ((xend+yend)*xend) (randomPositions g1 g2 xend yend)) ++ (spawnaroundplayer nextPos g2)
 	let charOfNextField = (checkField map nextPos)
-	let buildMapAsString = [createString l xstart xend ystart yend nextPos t walls | l <- indMap]
+	let buildMapAsString = [createString l xend yend nextPos t walls | l <- indMap]
 	let rotatedMap = rotate buildMapAsString inp
 	
 	if charOfNextField /= 'W'
@@ -99,7 +116,8 @@ loop indMap map p t xstart xend ystart yend = do
 	else putStrLn (formatString (rotate map inp))
 	
 	if (charOfNextField /= 'W' && charOfNextField /= 'X')
-	then loop indMap buildMapAsString nextPos t xstart xend ystart yend
+	then loop indMap buildMapAsString nextPos t xend yend
 	else if charOfNextField == 'X'
 	     then putStrLn "Congrats, you reached the target!"
-	     else loop indMap map p t xstart xend ystart yend
+	     else loop indMap map p t xend yend
+    
