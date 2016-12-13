@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-10-28 09:03:45.1410721 UTC
+2016-12-13 07:52:40.8065606 UTC
 
 interface main@main:Main 8001
-  interface hash: 44392d313bc2687cc0bb58a76709100f
-  ABI hash: a3d7e7b8f67c59657075ca44017271cf
+  interface hash: 5ebe0448b0417d5404c414e00966f327
+  ABI hash: 2705935d6f96beb675a992df144b2821
   export-list hash: 21804da3d5eadb99ae91162f05780e64
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: a7b89ab6382ce46850aa618c527c3158
@@ -31,7 +31,8 @@ family instance modules: base-4.9.0.0:Control.Applicative
                          base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
                          base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
                          base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
-import  -/  Project-0.1.0.0@Project-0.1.0.0-BQAUV2G50M66dry8GmjFk1:Lib c4436b04a16993ee46403999c6c9b071
+import  -/  Project-0.1.0.0@Project-0.1.0.0-BQAUV2G50M66dry8GmjFk1:IO 9d9083d83c23aad2f08ff7232a49b5f8
+import  -/  Project-0.1.0.0@Project-0.1.0.0-BQAUV2G50M66dry8GmjFk1:Types 7a3f026129a93533a28c09edeeea9185
 import  -/  base-4.9.0.0:GHC.IO.Handle 109a593fc49a4634c4c220b84516e807
 import  -/  base-4.9.0.0:GHC.IO.Handle.FD 3de9cd0bce44181341beffd8ff7eecc5
 import  -/  base-4.9.0.0:GHC.IO.Handle.Types cc8beb572ca2965f7d73978f77d1a6d8
@@ -51,18 +52,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-b74ed801f73768b69b8a28fc8c618c44
-  $wgo ::
-    GHC.Prim.Int#
-    -> (# [(GHC.Types.Int, GHC.Types.Int)],
-          [[(GHC.Types.Int, GHC.Types.Int)]] #)
-  {- Arity: 1, Strictness: <L,U>, Inline: [0] -}
-94abaef2c4ed1d56037ace9b3f5de04f
+cc59f72aeb8037106392297f17f946fe
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-786d337a8a493072835b24a075c687b9
+e475ba84abf1a547e5a5fd27a4df90fe
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -74,61 +69,52 @@ b74ed801f73768b69b8a28fc8c618c44
                         s of ds1 { (#,#) ipv ipv1 ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
-                        Main.main5
+                        Main.main7
                         GHC.Types.True
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 Lib.loop1
-                   Main.main_b
-                   Main.main_c
-                   Main.main_p
-                   Main.main_t
-                   Main.main_xend
-                   Main.main_yend
-                   ipv2 } }) -}
-02856c127acfc90c98a046552aba725c
-  main2 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 23#) -}
-45b9babec8a09262f0240f3b347cab0d
-  main3 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 18#) -}
-96b7cf2f69c11fc40fcc52d5f93339b0
+                 IO.mainmenu1 Main.main5 Main.main2 ipv2 } }) -}
+1cd90c23d16114edacbcd137e115b5c8
+  main2 :: Types.PositionList (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs,
+     Unfolding: (Types.Step
+                   @ (GHC.Types.Int, GHC.Types.Int)
+                   Main.main3
+                   (Types.End @ (GHC.Types.Int, GHC.Types.Int))) -}
+85f668afc9dc63e7caf0cdadf274a5f7
+  main3 :: (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Unfolding: ((Main.main4, Main.main4)) -}
+452e9c782568dbf8ba9f18b84360f7a8
   main4 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
-06eb285a598766a581fc626adc1f9b46
-  main5 :: GHC.Base.String
-  {- Unfolding: (Lib.formatString Main.main_c) -}
-9e08a13357a60ffbb80f67b650b8ba63
-  main6 ::
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 1#) -}
+9e403507d0bebb8e1c390ebbc463293c
+  main5 :: Types.Map
+  {- Unfolding: (Types.Map
+                   Main.main_rows
+                   Main.main_cols
+                   Main.main6) -}
+9564b6b287132ce0d627aeacb40ecb9f
+  main6 :: [[Types.MapObject]]
+  {- Unfolding: (Types.$winitmapobjectlist
+                   Main.main3
+                   8#
+                   Main.main_cols) -}
+f20485eb59d946ae115065d46e944818
+  main7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Game started!"#) -}
+724ac9121f57c8ef021d12873a0e302a
+  main8 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
-d6d080387bd1f165d1c595b7a908b63a
-  main_b :: [[(GHC.Types.Int, GHC.Types.Int)]]
-  {- Unfolding: (case Main.$wgo 0# of ww { (#,#) ww1 ww2 ->
-                 GHC.Types.: @ [(GHC.Types.Int, GHC.Types.Int)] ww1 ww2 }) -}
-1e6c19f1cba8cd4b5dad8be58b967548
-  main_c :: [GHC.Base.String]
-  {- Unfolding: (Main.main_go Main.main_b) -}
-2c0e833fe45ebebc32e1699d09da5dd7
-  main_go :: [[(GHC.Types.Int, GHC.Types.Int)]] -> [GHC.Base.String]
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
-6c28394a25463d310ca324fe81c8fd57
-  main_p :: (GHC.Types.Int, GHC.Types.Int)
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: ((Main.main4, Main.main4)) -}
-484a2f74c91d2048e5f6d79f3abfb7b2
-  main_t :: (GHC.Types.Int, GHC.Types.Int)
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: ((Main.main3, Main.main2)) -}
-0ddbc11269b9a17aea083a05c3329b58
-  main_xend :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 20#) -}
-ee62cde0c80b1910cb9edec7a9941319
-  main_yend :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 27#) -}
+19cb4c25dc37edac86f6aec2b0bc4c16
+  main_cols :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10#) -}
+43675b19ffa826d1a461d24298cc96a3
+  main_rows :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8#) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

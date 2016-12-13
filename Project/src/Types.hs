@@ -69,7 +69,7 @@ getfreeindicesbytuplelst lst mp = map fst (filter (\x -> snd x == True) (zip lst
 getindices obj = (yobj obj, xobj obj)
 
 -- Erhalte (y,x) des Spielers innerhalb der Map
-findplayer mp = getindices $ head $ filter (\e -> kind e == 'O') (intercalate [] (objs mp))
+findobj k mp = getindices $ head $ filter (\e -> kind e == k) (intercalate [] (objs mp))
 
 -- Füge Elemente in erzeugten [[MapObject]] der Map ein                                   
 insert y x k d objs = [[if (yobj o) /= y || (xobj o) /= x then o else (MapObject k d y x) | o <- obj] | obj <- objs]
@@ -86,7 +86,7 @@ insertwall x mp = mp {objs=insert (fst x) (snd x) 'W' "Wall" (objs mp)}
 -- Benutzt "insertwall" und erzeugt anhand einer Tupleindizeliste alle Walls in der Map
 insertwalls :: [(Int, Int)] -> Map -> Map
 insertwalls [] mp = mp
-insertwalls (x:xs) mp = ((insertwalls xs) . (insertwall x)) mp
+insertwalls (x:xs) mp = (insertwalls xs . insertwall x) mp
 
 -- Benutzt "transposemap" und "reversemap" um die Map zu drehen anhand einer Eingabe
 rotate map 'v' = map

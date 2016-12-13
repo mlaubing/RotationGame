@@ -16,6 +16,8 @@ randomPositions g1 g2 n = zip [(e `mod` (n-1))+1 | e <- randomlist n g1] [(e `mo
 randomlist :: Int -> StdGen -> [Int]
 randomlist n = take n . unfoldr (Just . random)
 
+spawnwalls g1 g2 player map = (spawnaroundplayer player g2) ++ ((randomPositions g1 g2 . getbiggerdimension) map)
+
 spawnaroundplayer player gen = [ls !! (e `mod` 8) | e <- (randomlist 3 gen)]
     where posx = fst player
           posy = snd player
@@ -28,23 +30,29 @@ spawnaroundplayer player gen = [ls !! (e `mod` 8) | e <- (randomlist 3 gen)]
                 (posx,posy+1),
                 (posx,posy-1)]
 
-loop map save c | c=='v' || c=='r' || c=='h' || c=='l' = 
+                
+checkend mp answer save | tc `elem` (getallfreefields mp) = loop (rotate (changemap tc mp) answer) furtherstep answer
+                        | tc == target                    = do putStrLn "REACHED THE TARGET! YOU WON!!!"
+                                                               mainmenu mp (Step (1,1) End)
+                        | otherwise                       = loop (rotate (changemap player mp) answer) save answer
+    where player      = (findobj 'O' mp)
+          target      = (findobj 'X' mp)
+          tc          = (temporarilynewposition player answer)
+          furtherstep = (insertposition (getsinglestepcoords answer) save)
+          
+          
+loop mp save c | c=='v' || c=='r' || c=='h' || c=='l' = 
                    do 
                        putStrLn "Move 'r', 'l', 'h', 'v': "
                        g1 <- newStdGen
                        g2 <- newStdGen
-                       let walls = (spawnaroundplayer player g2) ++ ((randomPositions g1 g2 . getbiggerdimension) map)
-                           randoms = getfreeindicesbytuplelst walls map
-                           newmap = insertwalls randoms map
+                       let walls = spawnwalls g1 g2 player mp
+                           newmap = insertwalls (getfreeindicesbytuplelst walls mp) mp
                        putStrLn (show newmap)
                        answer <- readLn :: IO Char
-                       let testcase = (temporarilynewposition player answer)
-                       if testcase `elem` (getallfreefields newmap) then
-                           loop (rotate (changemap testcase newmap) answer) (insertposition (getsinglestepcoords answer) save) answer
-                       else
-                           loop (rotate (changemap player newmap) answer) save answer
-                | otherwise = mainmenu map save
-                where player = (findplayer map)
+                       checkend newmap answer save
+                | otherwise = mainmenu mp save
+                where player = (findobj 'O' mp)
                  
               
 mainmenu map save = do

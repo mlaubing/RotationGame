@@ -1,0 +1,1134 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-13 07:50:08.295987 UTC
+
+interface Project-0.1.0.0-BQAUV2G50M66dry8GmjFk1:Types 8001
+  interface hash: b4b273b630b5c49f70071de4a586d442
+  ABI hash: 7a3f026129a93533a28c09edeeea9185
+  export-list hash: d2b8171e432614245a9a9608bb1b9fab
+  orphan hash: b88f4018e2f799f5796793b8159326ad
+  flag hash: db5429e44f4d589be9142049ae48b102
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Types.changemap
+  Types.checkiffieldisfree
+  Types.createrowofoneobject
+  Types.description
+  Types.findobj
+  Types.getallfreefields
+  Types.getbiggerdimension
+  Types.getfreefieldsinrow
+  Types.getfreeindicesbytuplelst
+  Types.getindices
+  Types.getposition
+  Types.getsinglestepcoords
+  Types.getsteps
+  Types.initmapobjectlist
+  Types.insert
+  Types.insertposition
+  Types.insertwall
+  Types.insertwalls
+  Types.kind
+  Types.mapfactory
+  Types.reversemap
+  Types.rotate
+  Types.transposemap
+  Types.xobj
+  Types.yobj
+  Types.Map{Types.Map n objs u}
+  Types.MapObject{Types.MapObject}
+  Types.PositionList{Types.End Types.Step}
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable d40d70990c96ce5d83ac87c2f0bea9d9
+import  -/  base-4.9.0.0:Data.List def1f8b4f231319a5fe5907776accd7e
+import  -/  base-4.9.0.0:Data.OldList c1be4a1b7d25d5173b71e8796c770d06
+import  -/  base-4.9.0.0:Data.Tuple 93ba93ac347f2d9f7bc6817c5982f3ac
+import  -/  base-4.9.0.0:GHC.Base f4d51a1fd479b72cfcf1a3615a73ed18
+import  -/  base-4.9.0.0:GHC.List 700d266f30fda528f6bf6512e56c3a1e
+import  -/  base-4.9.0.0:GHC.Num a3f182b4264cbaa3785683708453f276
+import  -/  base-4.9.0.0:GHC.Show 0f4f1b56cc1a8e3bb102cea90130c72c
+import  -/  base-4.9.0.0:Prelude eb1c3af8140de70083f65c44bbe8cb37
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 1a78f3e0bf56c661747b22b91e8b2976
+bd76772d7018e0ee2cb144722ff172b7
+  $fEqMapObject :: GHC.Classes.Eq Types.MapObject
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Types.MapObject
+                  Types.$fEqMapObject_$c==
+                  Types.$fEqMapObject_$c/= -}
+bd76772d7018e0ee2cb144722ff172b7
+  $fEqMapObject_$c/= ::
+    Types.MapObject -> Types.MapObject -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),1*U,1*U(U),1*U(U))><S(S(S)LLL),1*U(1*U(U),1*U,1*U(U),1*U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Types.MapObject) (b :: Types.MapObject) ->
+                 case Types.$fEqMapObject_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+bd76772d7018e0ee2cb144722ff172b7
+  $fEqMapObject_$c== ::
+    Types.MapObject -> Types.MapObject -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),1*U,1*U(U),1*U(U))><S(S(S)LLL),1*U(1*U(U),1*U,1*U(U),1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Types.MapObject) (w1 :: Types.MapObject) ->
+                 case w of ww { Types.MapObject ww1 ww2 ww3 ww4 ->
+                 case ww1 of ww5 { GHC.Types.C# ww6 ->
+                 case w1 of ww7 { Types.MapObject ww8 ww9 ww10 ww11 ->
+                 case ww8 of ww12 { GHC.Types.C# ww13 ->
+                 Types.$w$c== ww6 ww2 ww3 ww4 ww13 ww9 ww10 ww11 } } } }) -}
+2d41edf20d40a481e525fdd9c0c1137a
+  $fEqPositionList ::
+    GHC.Classes.Eq a => GHC.Classes.Eq (Types.PositionList a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dEq :: GHC.Classes.Eq a).
+                  @ (Types.PositionList a)
+                  (Types.$fEqPositionList_$c== @ a $dEq)
+                  (Types.$fEqPositionList_$c/= @ a $dEq) -}
+2d41edf20d40a481e525fdd9c0c1137a
+  $fEqPositionList_$c/= ::
+    GHC.Classes.Eq a =>
+    Types.PositionList a -> Types.PositionList a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (a1 :: Types.PositionList a)
+                   (b :: Types.PositionList a) ->
+                 case Types.$fEqPositionList_$c== @ a $dEq a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+2d41edf20d40a481e525fdd9c0c1137a
+  $fEqPositionList_$c== ::
+    GHC.Classes.Eq a =>
+    Types.PositionList a -> Types.PositionList a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U> -}
+bdaf2e98bc8bc91709375986470bbb94
+  $fShowMap :: GHC.Show.Show Types.Map
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Types.Map
+                  Types.$fShowMap_$cshowsPrec
+                  Types.$fShowMap_$cshow
+                  Types.$fShowMap_$cshowList -}
+bdaf2e98bc8bc91709375986470bbb94
+  $fShowMap1 :: Types.Map -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2,
+     Unfolding: (\ (x :: Types.Map) (s :: GHC.Base.String)[OneShot] ->
+                 case x of ww { Types.Map ww1 ww2 ww3 ->
+                 GHC.Base.++ @ GHC.Types.Char (Types.$w$cshow ww3) s }) -}
+bd76772d7018e0ee2cb144722ff172b7
+  $fShowMapObject :: GHC.Show.Show Types.MapObject
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Types.MapObject
+                  Types.$fShowMapObject_$cshowsPrec
+                  Types.$fShowMapObject_$cshow
+                  Types.$fShowMapObject_$cshowList -}
+bd76772d7018e0ee2cb144722ff172b7
+  $fShowMapObject1 ::
+    Types.MapObject -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2,
+     Unfolding: (\ (x :: Types.MapObject)
+                   (s :: GHC.Base.String)[OneShot] ->
+                 case x of ww { Types.MapObject ww1 ww2 ww3 ww4 ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   (Types.$w$cshow1 ww1 ww2 ww3 ww4)
+                   s }) -}
+a8d10f6abf91d97d256143f276d24273
+  $fShowMapObject2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   GHC.Show.shows18
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+a22ab61635bb0950f90c2e38df540e24
+  $fShowMapObject3 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows19
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+bd76772d7018e0ee2cb144722ff172b7
+  $fShowMapObject_$cshow :: Types.MapObject -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(LSLL),1*U(1*U(1*U),1*U,1*U(U),1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Types.MapObject) ->
+                 case w of ww { Types.MapObject ww1 ww2 ww3 ww4 ->
+                 Types.$w$cshow1 ww1 ww2 ww3 ww4 }) -}
+bd76772d7018e0ee2cb144722ff172b7
+  $fShowMapObject_$cshowList :: [Types.MapObject] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (ls :: [Types.MapObject]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ Types.MapObject
+                   Types.$fShowMapObject1
+                   ls
+                   s) -}
+bd76772d7018e0ee2cb144722ff172b7
+  $fShowMapObject_$cshowsPrec ::
+    GHC.Types.Int -> Types.MapObject -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,A><S(LSLL),1*U(1*U(1*U),1*U,1*U(U),1*U(U))><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: Types.MapObject)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n1 :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n1
+                      (Types.$fShowMapObject_$cshow x))
+                   s) -}
+bdaf2e98bc8bc91709375986470bbb94
+  $fShowMap_$cshow :: Types.Map -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(LLS),1*U(A,A,1*U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Types.Map) ->
+                 case w of ww { Types.Map ww1 ww2 ww3 -> Types.$w$cshow ww3 }) -}
+bdaf2e98bc8bc91709375986470bbb94
+  $fShowMap_$cshowList :: [Types.Map] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (ls :: [Types.Map]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Types.Map Types.$fShowMap1 ls s) -}
+bdaf2e98bc8bc91709375986470bbb94
+  $fShowMap_$cshowsPrec ::
+    GHC.Types.Int -> Types.Map -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S(LLS),1*U(A,A,1*U)><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int) (x :: Types.Map) (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n1 :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n1
+                      (Types.$fShowMap_$cshow x))
+                   s) -}
+d32c3fab582c539f97df30253cdc811d
+  $fShowMap_go :: [[Types.MapObject]] -> [[GHC.Types.Char]]
+  {- Arity: 1, Strictness: <S,1*U> -}
+2d41edf20d40a481e525fdd9c0c1137a
+  $fShowPositionList ::
+    GHC.Show.Show a => GHC.Show.Show (Types.PositionList a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (Types.PositionList a)
+                  (Types.$fShowPositionList_$cshowsPrec @ a $dShow)
+                  (Types.$fShowPositionList_$cshow @ a $dShow)
+                  (Types.$fShowPositionList_$cshowList @ a $dShow) -}
+3e6f412ee2014ee8a4b8f751f9fac2dc
+  $fShowPositionList1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+2d41edf20d40a481e525fdd9c0c1137a
+  $fShowPositionList_$cshow ::
+    GHC.Show.Show a => Types.PositionList a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dShow :: GHC.Show.Show a) (x :: Types.PositionList a) ->
+                 Types.$fShowPositionList_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+2d41edf20d40a481e525fdd9c0c1137a
+  $fShowPositionList_$cshowList ::
+    GHC.Show.Show a => [Types.PositionList a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [Types.PositionList a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Types.PositionList a)
+                   (Types.$fShowPositionList_$cshowsPrec
+                      @ a
+                      $dShow
+                      Types.$fShowPositionList1)
+                   eta
+                   eta1) -}
+2d41edf20d40a481e525fdd9c0c1137a
+  $fShowPositionList_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> Types.PositionList a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><L,1*U(U)><S,1*U> -}
+579bcb2ad21b712e19cb3addc0b92767
+  $s$fEq(,) :: GHC.Classes.Eq (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt)
+                  (GHC.Classes.$fEq(,)_$c/=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt) -}
+f50fa37f0b2016a257f68a1ea6304d04
+  $tc'End :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16752653772898662836L##
+                   1310078294109806806L##
+                   Types.$trModule
+                   Types.$tc'End1) -}
+bc7028b53066fead35fe32a63a78fb87
+  $tc'End1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'End"#) -}
+4722df0dfc99577442c14cd79955e434
+  $tc'Map :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9274949215398861497L##
+                   5129515800613405955L##
+                   Types.$trModule
+                   Types.$tc'Map1) -}
+1f822ece9d4f63f936d92eb013a2d316
+  $tc'Map1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Map"#) -}
+addd0be531746a9fd3a5fb544c415da8
+  $tc'MapObject :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9988983537747295162L##
+                   5525251939289049493L##
+                   Types.$trModule
+                   Types.$tc'MapObject1) -}
+a8079e231e989867fe3aaac6e66a33f3
+  $tc'MapObject1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'MapObject"#) -}
+4ae7d13222bf178cc10f8571e177c1c5
+  $tc'Step :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10279673260219584559L##
+                   17297762595216340879L##
+                   Types.$trModule
+                   Types.$tc'Step1) -}
+c796120d0363cb23e7f72bb8c641aa15
+  $tc'Step1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Step"#) -}
+52348af8f6e4e7b331a858e70057e1b1
+  $tcMap :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15605842104405728995L##
+                   6259518981763436754L##
+                   Types.$trModule
+                   Types.$tcMap1) -}
+07eaefb47490080035f151eb1135dfc8
+  $tcMap1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Map"#) -}
+bbbfdaea430969890f988c2fb655bd58
+  $tcMapObject :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8458118709869841548L##
+                   8970062677486574769L##
+                   Types.$trModule
+                   Types.$tcMapObject1) -}
+a6512b71c3ba39320472b2013ee6bb55
+  $tcMapObject1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MapObject"#) -}
+482735b6bdcf3fe39d37556ce88c6f62
+  $tcPositionList :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11918053005312172846L##
+                   7579959249778537844L##
+                   Types.$trModule
+                   Types.$tcPositionList1) -}
+0f20eefd0dc6ff1d4411d424e4454c65
+  $tcPositionList1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "PositionList"#) -}
+b0a998838bd5e47546425270bd3d1760
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Types.$trModule2 Types.$trModule1) -}
+58799fbbcd7c383e76693080b9d2b290
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Types"#) -}
+f83727f5a962fe633d98348d8626c208
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Project-0.1.0.0-BQAUV2G50M66dry8GmjFk1"#) -}
+7ecaadb873c93a4f94240871c6b822a7
+  $w$c== ::
+    GHC.Prim.Char#
+    -> GHC.Base.String
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Prim.Char#
+    -> GHC.Base.String
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <S,U><L,1*U><L,1*U(U)><L,1*U(U)><S,U><L,1*U><L,1*U(U)><L,1*U(U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Char#)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Types.Int)
+                   (ww4 :: GHC.Prim.Char#)
+                   (ww5 :: GHC.Base.String)
+                   (ww6 :: GHC.Types.Int)
+                   (ww7 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.eqChar# ww ww4) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Base.eqString ww1 ww5 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case ww2 of wild2 { GHC.Types.I# x ->
+                           case ww6 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x y) of wild4 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.eqInt ww3 ww7 } } } } }) -}
+f3a150306275749021df85f98b5070eb
+  $w$cshow :: [[Types.MapObject]] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: [[Types.MapObject]]) ->
+                 case Types.$fShowMap_go ww of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char
+                   : x xs1
+                   -> Data.OldList.intercalate_$spoly_go
+                        @ GHC.Types.Char
+                        x
+                        (Data.OldList.prependToAll
+                           @ [GHC.Types.Char]
+                           (GHC.Types.[] @ GHC.Types.Char)
+                           xs1) }) -}
+90bffa1ff64eafb8758da32679e88ad6
+  $w$cshow1 ::
+    GHC.Types.Char
+    -> GHC.Base.String
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+  {- Arity: 4, Strictness: <L,1*U(1*U)><S,1*U><L,1*U(U)><L,1*U(U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.Char)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Types.Int) ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   ww1
+                   (GHC.CString.unpackAppendCString#
+                      ": "#
+                      (case ww of ww4 { GHC.Types.C# ww5 ->
+                       let {
+                         karg :: [GHC.Types.Char]
+                         = GHC.CString.unpackAppendCString#
+                             "\n\
+                             \x: "#
+                             (case ww3 of ww6 { GHC.Types.I# ww7 ->
+                              case GHC.Show.$wshowSignedInt
+                                     0#
+                                     ww7
+                                     (GHC.Types.[] @ GHC.Types.Char) of ww8 { (#,#) ww9 ww10 ->
+                              GHC.Base.++
+                                @ GHC.Types.Char
+                                (GHC.Types.: @ GHC.Types.Char ww9 ww10)
+                                (GHC.CString.unpackAppendCString#
+                                   "\n\
+                                   \y: "#
+                                   (case ww2 of ww11 { GHC.Types.I# ww12 ->
+                                    case GHC.Show.$wshowSignedInt
+                                           0#
+                                           ww12
+                                           (GHC.Types.[]
+                                              @ GHC.Types.Char) of ww13 { (#,#) ww14 ww15 ->
+                                    GHC.Types.: @ GHC.Types.Char ww14 ww15 } })) } })
+                       } in
+                       case ww5 of ds {
+                         DEFAULT
+                         -> GHC.Base.++
+                              @ GHC.Types.Char
+                              (GHC.Types.:
+                                 @ GHC.Types.Char
+                                 GHC.Show.shows19
+                                 (GHC.Show.$wshowLitChar ds Types.$fShowMapObject3))
+                              karg
+                         '\''#
+                         -> GHC.Base.++
+                              @ GHC.Types.Char
+                              Types.$fShowMapObject2
+                              karg } }))) -}
+8933e9f5b354525d688c9998c1eaa90d
+  $wfindobj ::
+    GHC.Types.Char -> Types.Map -> (# GHC.Types.Int, GHC.Types.Int #)
+  {- Arity: 2, Strictness: <L,U(U)><L,1*U(A,A,1*U)>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Types.Char) (w1 :: Types.Map) ->
+                 let {
+                   obj :: Types.MapObject
+                   = case w1 of wild { Types.Map ds ds1 ds2 ->
+                     case ds2 of wild1 {
+                       [] -> GHC.List.badHead @ Types.MapObject
+                       : x xs1
+                       -> letrec {
+                            $wgo :: [Types.MapObject]
+                                    -> (# GHC.Types.Char, GHC.Base.String, GHC.Types.Int,
+                                          GHC.Types.Int #)
+                              {- Arity: 1, Strictness: <S,1*U>, Inline: [0] -}
+                            = \ (w2 :: [Types.MapObject]) ->
+                              case w2 of wild2 {
+                                []
+                                -> case GHC.List.badHead
+                                   ret_ty (# GHC.Types.Char, GHC.Base.String, GHC.Types.Int,
+                                             GHC.Types.Int #)
+                                   of {}
+                                : y ys
+                                -> case y of wild3 { Types.MapObject k ds3 ds4 ds5 ->
+                                   case k of wild4 { GHC.Types.C# x1 ->
+                                   case w of wild5 { GHC.Types.C# y1 ->
+                                   case GHC.Prim.tagToEnum#
+                                          @ GHC.Types.Bool
+                                          (GHC.Prim.eqChar# x1 y1) of wild6 {
+                                     GHC.Types.False -> $wgo ys
+                                     GHC.Types.True -> (# wild4, ds3, ds4, ds5 #) } } } } }
+                          } in
+                          case $wgo
+                                 (Data.OldList.intercalate_$spoly_go
+                                    @ Types.MapObject
+                                    x
+                                    (Data.OldList.prependToAll
+                                       @ [Types.MapObject]
+                                       (GHC.Types.[] @ Types.MapObject)
+                                       xs1)) of ww { (#,,,#) ww1 ww2 ww3 ww4 ->
+                          Types.MapObject ww1 ww2 ww3 ww4 } } }
+                 } in
+                 (# case obj of wild { Types.MapObject ds ds1 y ds2 -> y },
+                    case obj of wild { Types.MapObject ds ds1 ds2 x -> x } #)) -}
+b56c704f024d00643c6b5c637c735ce5
+  $wgetallfreefields ::
+    [[Types.MapObject]] -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: [[Types.MapObject]]) ->
+                 case Types.getallfreefields_go ww of wild {
+                   [] -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int)
+                   : x xs1
+                   -> Data.OldList.intercalate_$spoly_go
+                        @ (GHC.Types.Int, GHC.Types.Int)
+                        x
+                        (Data.OldList.prependToAll
+                           @ [(GHC.Types.Int, GHC.Types.Int)]
+                           (GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int))
+                           xs1) }) -}
+b0271dee44b4ee2df429a911ceea6e0a
+  $wgetposition ::
+    (GHC.Num.Num a, GHC.Num.Num t) => [(a, t)] -> (# a, t #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,A,A,1*C1(U))><L,U(1*U,A,A,A,A,A,1*C1(U))><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ t
+                   @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: GHC.Num.Num t)
+                   (w2 :: [(a, t)]) ->
+                 (# let {
+                      k :: a -> a -> a = GHC.Num.+ @ a w
+                    } in
+                    letrec {
+                      go3 :: [(a, t)] -> a -> a {- Arity: 2, Strictness: <S,1*U><L,U> -}
+                      = \ (ds :: [(a, t)]) (eta :: a) ->
+                        case ds of wild {
+                          [] -> eta : y ys -> go3 ys (k eta (Data.Tuple.fst @ a @ t y)) }
+                    } in
+                    go3 w2 (GHC.Num.fromInteger @ a w Types.getposition1),
+                    let {
+                      k :: t -> t -> t = GHC.Num.+ @ t w1
+                    } in
+                    letrec {
+                      go3 :: [(a, t)] -> t -> t {- Arity: 2, Strictness: <S,1*U><L,U> -}
+                      = \ (ds :: [(a, t)]) (eta :: t) ->
+                        case ds of wild {
+                          [] -> eta : y ys -> go3 ys (k eta (Data.Tuple.snd @ a @ t y)) }
+                    } in
+                    go3 w2 (GHC.Num.fromInteger @ t w1 Types.getposition1) #)) -}
+719ee7aa73f9b2bcb1168b31e6f4952d
+  $wgetsinglestepcoords ::
+    (GHC.Num.Num t1, GHC.Num.Num t) => GHC.Prim.Char# -> (# t, t1 #)
+  {- Arity: 3,
+     Strictness: <L,U(A,A,A,1*C1(U),A,A,1*C1(U))><L,U(A,A,A,1*C1(U),A,A,1*C1(U))><S,1*U>,
+     Inline: [0],
+     Unfolding: (\ @ t
+                   @ t1
+                   (w :: GHC.Num.Num t1)
+                   (w1 :: GHC.Num.Num t)
+                   (ww :: GHC.Prim.Char#) ->
+                 case ww of wild {
+                   DEFAULT -> case Types.getsinglestepcoords2 ret_ty (# t, t1 #) of {}
+                   'h'#
+                   -> (# GHC.Num.fromInteger @ t w1 Types.getsinglestepcoords1,
+                         GHC.Num.fromInteger @ t1 w Types.getposition1 #)
+                   'l'#
+                   -> (# GHC.Num.fromInteger @ t w1 Types.getposition1,
+                         GHC.Num.negate
+                           @ t1
+                           w
+                           (GHC.Num.fromInteger @ t1 w Types.getsinglestepcoords1) #)
+                   'r'#
+                   -> (# GHC.Num.fromInteger @ t w1 Types.getposition1,
+                         GHC.Num.fromInteger @ t1 w Types.getsinglestepcoords1 #)
+                   'v'#
+                   -> (# GHC.Num.negate
+                           @ t
+                           w1
+                           (GHC.Num.fromInteger @ t w1 Types.getsinglestepcoords1),
+                         GHC.Num.fromInteger @ t1 w Types.getposition1 #) }) -}
+4ba3c1f65adb567186f765afba17875b
+  $winitmapobjectlist ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> GHC.Prim.Int# -> GHC.Types.Int -> [[Types.MapObject]]
+  {- Arity: 3, Strictness: <L,U(1*U(U),1*U(U))><S,U><L,U(U)>,
+     Inline: [0],
+     Unfolding: (\ (w :: (GHC.Types.Int, GHC.Types.Int))
+                   (ww :: GHC.Prim.Int#)
+                   (w1 :: GHC.Types.Int) ->
+                 case Types.$wmapfactory 0# ww w1 of ww1 { (#,#) ww2 ww3 ->
+                 Types.insert
+                   (GHC.Types.I# (GHC.Prim.-# ww 1#))
+                   (case w1 of wild { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.-# x 1#) })
+                   Types.initmapobjectlist4
+                   Types.initmapobjectlist3
+                   (Types.insert
+                      (case w of wild { (,) x ds1 -> x })
+                      (case w of wild { (,) ds1 y -> y })
+                      Types.initmapobjectlist2
+                      Types.initmapobjectlist1
+                      (GHC.Types.: @ [Types.MapObject] ww2 ww3)) }) -}
+f0e3fb298e10fc9a0fb6b47a4ed6ec01
+  $winsertwalls ::
+    [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> [[Types.MapObject]]
+    -> (# GHC.Types.Int, GHC.Types.Int, [[Types.MapObject]] #)
+  {- Arity: 4, Strictness: <S,1*U><L,U><L,U><L,U>, Inline: [0] -}
+fa6fe7f115ee49d48e4df2bd4e1158f7
+  $wmapfactory ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> (# [Types.MapObject], [[Types.MapObject]] #)
+  {- Arity: 3, Strictness: <S,U><S,U><L,U(U)>, Inline: [0] -}
+bdaf2e98bc8bc91709375986470bbb94
+  data Map
+    = Map {n :: GHC.Types.Int,
+           u :: GHC.Types.Int,
+           objs :: [[Types.MapObject]]}
+bd76772d7018e0ee2cb144722ff172b7
+  data MapObject
+    = MapObject GHC.Types.Char
+                GHC.Base.String
+                GHC.Types.Int
+                GHC.Types.Int
+2d41edf20d40a481e525fdd9c0c1137a
+  data PositionList a = End | Step a (Types.PositionList a)
+b1e1a7576938201e60c5fcc44f05587f
+  changemap ::
+    (GHC.Types.Int, GHC.Types.Int) -> Types.Map -> Types.Map
+  {- Arity: 2, Strictness: <L,U(U(U),U(U))><S,1*U(U(U),U(U),A)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (t :: (GHC.Types.Int, GHC.Types.Int)) (map :: Types.Map) ->
+                 case map of wild { Types.Map ds ds1 ds2 ->
+                 Types.Map ds ds1 (Types.initmapobjectlist t ds ds1) }) -}
+a40cb633f09b324111cbceeaf58e17d4
+  checkiffieldisfree ::
+    [(GHC.Types.Int, GHC.Types.Int)] -> Types.Map -> [GHC.Types.Bool]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U(A,A,U)> -}
+a8303a20e5c3086762419acd77a2628f
+  createrowofoneobject ::
+    (GHC.Types.Int -> Types.MapObject)
+    -> [GHC.Types.Int] -> GHC.Types.Int -> [Types.MapObject]
+  {- Arity: 3, Strictness: <L,C(U)><S,1*U><L,U>,
+     Unfolding: (\ (f :: GHC.Types.Int -> Types.MapObject)
+                   (xs :: [GHC.Types.Int])
+                   (y :: GHC.Types.Int) ->
+                 case xs of wild {
+                   [] -> case GHC.List.badHead ret_ty [Types.MapObject] of {}
+                   : x ds1
+                   -> case x of wild1 { GHC.Types.I# x1 ->
+                      case x1 of wild2 {
+                        DEFAULT
+                        -> GHC.Types.:
+                             @ Types.MapObject
+                             (Types.MapObject
+                                Types.createrowofoneobject2
+                                Types.createrowofoneobject1
+                                y
+                                Types.$fShowPositionList1)
+                             (let {
+                                z1 :: GHC.Types.Int
+                                = case Types.createrowofoneobject_go
+                                         wild
+                                         (GHC.List.lastError
+                                            @ GHC.Types.Int) of wild3 { GHC.Types.I# x2 ->
+                                  GHC.Types.I# (GHC.Prim.+# x2 1#) }
+                              } in
+                              let {
+                                z2 :: Types.MapObject {- Strictness: m -}
+                                = Types.MapObject
+                                    Types.createrowofoneobject2
+                                    Types.createrowofoneobject1
+                                    y
+                                    z1
+                              } in
+                              let {
+                                z3 :: [Types.MapObject]
+                                = GHC.Types.: @ Types.MapObject z2 (GHC.Types.[] @ Types.MapObject)
+                              } in
+                              letrec {
+                                go3 :: [GHC.Types.Int] -> [Types.MapObject]
+                                  {- Arity: 1, Strictness: <S,1*U> -}
+                                = \ (ds :: [GHC.Types.Int]) ->
+                                  case ds of wild3 {
+                                    [] -> z3
+                                    : y1 ys -> GHC.Types.: @ Types.MapObject (f y1) (go3 ys) }
+                              } in
+                              go3 wild)
+                        0#
+                        -> GHC.Base.map @ GHC.Types.Int @ Types.MapObject f wild } } }) -}
+0b67baf7736cea9c9599f876ac938a02
+  createrowofoneobject1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Wall"#) -}
+250774ab61fafe33c58edf9d09f76b7f
+  createrowofoneobject2 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'W'#) -}
+d60dbf12a626cd8edf545bddef7ecf7d
+  createrowofoneobject_go ::
+    [GHC.Types.Int] -> GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U(U)> -}
+216802f89962174b05db0868532f22e9
+  description :: Types.MapObject -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLL),1*U(A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Types.MapObject) ->
+                 case ds of wild { Types.MapObject ds1 descript ds2 ds3 ->
+                 descript }) -}
+dda1eed580d283ee42e6ac4ece716c2e
+  findobj ::
+    GHC.Types.Char -> Types.Map -> (GHC.Types.Int, GHC.Types.Int)
+  {- Arity: 2, Strictness: <L,U(U)><L,1*U(A,A,1*U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Char) (w1 :: Types.Map) ->
+                 case Types.$wfindobj w w1 of ww { (#,#) ww1 ww2 -> (ww1, ww2) }) -}
+ea341c7abf02b225ba255724eb7968f8
+  getallfreefields :: Types.Map -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Types.Map) ->
+                 case w of ww { Types.Map ww1 ww2 ww3 ->
+                 Types.$wgetallfreefields ww3 }) -}
+014f490a0658b32d2aaf9ee9cf664ac9
+  getallfreefields_go ::
+    [[Types.MapObject]] -> [[(GHC.Types.Int, GHC.Types.Int)]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+01b1a5ad65973dbe5ff0d66be06e93de
+  getbiggerdimension :: Types.Map -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(S)S(S)L),1*U(1*U(U),1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (map :: Types.Map) ->
+                 case map of wild { Types.Map ds ds1 ds2 ->
+                 case ds of wild1 { GHC.Types.I# x ->
+                 case ds1 of wild2 { GHC.Types.I# y ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># x y) of wild3 {
+                   GHC.Types.False -> wild2 GHC.Types.True -> wild1 } } } }) -}
+628c413eab7b5ab3519b0e18a4069858
+  getfreefieldsinrow ::
+    Types.Map -> [[(GHC.Types.Int, GHC.Types.Int)]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Types.Map) ->
+                 case w of ww { Types.Map ww1 ww2 ww3 ->
+                 Types.getallfreefields_go ww3 }) -}
+68d0256eb7fb256d7e969b8ce50795c8
+  getfreeindicesbytuplelst ::
+    [(GHC.Types.Int, GHC.Types.Int)]
+    -> Types.Map -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><L,U(A,A,U)>,
+     Unfolding: (\ (lst :: [(GHC.Types.Int, GHC.Types.Int)])
+                   (mp :: Types.Map) ->
+                 Types.getfreeindicesbytuplelst_go
+                   lst
+                   (Types.checkiffieldisfree lst mp)) -}
+abf51104adbbea834084c1df14550440
+  getfreeindicesbytuplelst_go ::
+    [(GHC.Types.Int, GHC.Types.Int)]
+    -> [GHC.Types.Bool] -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+8d9526fe9adb531e81c55e664a49bdd6
+  getindices :: Types.MapObject -> (GHC.Types.Int, GHC.Types.Int)
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(A,A,1*U,1*U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (obj :: Types.MapObject) ->
+                 (case obj of wild { Types.MapObject ds ds1 y ds2 -> y },
+                  case obj of wild { Types.MapObject ds ds1 ds2 x -> x })) -}
+79439fbee2f0874b73d3e288263571ff
+  getposition :: (GHC.Num.Num a, GHC.Num.Num t) => [(a, t)] -> (a, t)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,A,A,1*C1(U))><L,U(1*U,A,A,A,A,A,1*C1(U))><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ t
+                   @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: GHC.Num.Num t)
+                   (w2 :: [(a, t)]) ->
+                 case Types.$wgetposition @ t @ a w w1 w2 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+a2751b41436b0978524d79b05f79603d
+  getposition1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+c736546a69618cabacdd85ada67eaa31
+  getsinglestepcoords ::
+    (GHC.Num.Num t1, GHC.Num.Num t) => GHC.Types.Char -> (t, t1)
+  {- Arity: 3,
+     Strictness: <L,U(A,A,A,1*C1(U),A,A,1*C1(U))><L,U(A,A,A,1*C1(U),A,A,1*C1(U))><S(S),1*U(1*U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ t
+                   @ t1
+                   (w :: GHC.Num.Num t1)
+                   (w1 :: GHC.Num.Num t)
+                   (w2 :: GHC.Types.Char) ->
+                 case w2 of ww { GHC.Types.C# ww1 ->
+                 case Types.$wgetsinglestepcoords
+                        @ t
+                        @ t1
+                        w
+                        w1
+                        ww1 of ww2 { (#,#) ww3 ww4 ->
+                 (ww3, ww4) } }) -}
+93f0aacab9fb417aa64140acbec0945c
+  getsinglestepcoords1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+8c91898f37daf2eb421f21da53d85ac5
+  getsinglestepcoords2 :: (t, t1)
+  {- Strictness: x -}
+8a2e0bb3b55f546c19ac511965bfd186
+  getsteps :: Types.PositionList a -> [a]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+8fbaff665400d377fa8fda39a86136e8
+  initmapobjectlist ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> GHC.Types.Int -> GHC.Types.Int -> [[Types.MapObject]]
+  {- Arity: 3, Strictness: <L,U(1*U(U),1*U(U))><S(S),U(U)><L,U(U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int))
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: GHC.Types.Int) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 Types.$winitmapobjectlist w ww1 w2 }) -}
+4ceec477e27dc0a6058ce935912c7fa8
+  initmapobjectlist1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Player"#) -}
+0af16ff683c74ba8023e555ffc9e50f7
+  initmapobjectlist2 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'O'#) -}
+2082012646f55c57eb5126ade57ab662
+  initmapobjectlist3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Target"#) -}
+979626e454bbda017b9b273be8031f0f
+  initmapobjectlist4 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'X'#) -}
+40e063995e7aecf09e6b595f7d369354
+  insert ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Char
+    -> GHC.Base.String
+    -> [[Types.MapObject]]
+    -> [[Types.MapObject]]
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(U)><L,U(U)><L,U><L,U><S,1*U>,
+     Unfolding: (\ (y :: GHC.Types.Int)
+                   (x :: GHC.Types.Int)
+                   (k :: GHC.Types.Char)
+                   (d :: GHC.Base.String)
+                   (objs1 :: [[Types.MapObject]]) ->
+                 let {
+                   lvl8 :: Types.MapObject {- Strictness: m -}
+                   = Types.MapObject k d y x
+                 } in
+                 letrec {
+                   go3 :: [Types.MapObject] -> [Types.MapObject]
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [Types.MapObject]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.[] @ Types.MapObject
+                       : y1 ys
+                       -> GHC.Types.:
+                            @ Types.MapObject
+                            (case y1 of wild1 { Types.MapObject ds1 ds2 y2 ds3 ->
+                             case y2 of wild2 { GHC.Types.I# x1 ->
+                             case y of wild3 { GHC.Types.I# y3 ->
+                             case GHC.Prim.tagToEnum#
+                                    @ GHC.Types.Bool
+                                    (GHC.Prim./=# x1 y3) of wild4 {
+                               GHC.Types.False
+                               -> case ds3 of wild5 { GHC.Types.I# x2 ->
+                                  case x of wild6 { GHC.Types.I# y4 ->
+                                  case GHC.Prim.tagToEnum#
+                                         @ GHC.Types.Bool
+                                         (GHC.Prim./=# x2 y4) of wild7 {
+                                    GHC.Types.False -> lvl8 GHC.Types.True -> wild1 } } }
+                               GHC.Types.True -> wild1 } } } })
+                            (go3 ys) }
+                 } in
+                 letrec {
+                   go4 :: [[Types.MapObject]] -> [[Types.MapObject]]
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [[Types.MapObject]]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.[] @ [Types.MapObject]
+                       : y1 ys -> GHC.Types.: @ [Types.MapObject] (go3 y1) (go4 ys) }
+                 } in
+                 go4 objs1) -}
+54143e3c94c24d5938e61b071f95af9b
+  insertposition :: a -> Types.PositionList a -> Types.PositionList a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (0, True, True) Types.Step -}
+3db0a71533ddc58d2c6b6fedac8f9494
+  insertwall ::
+    (GHC.Types.Int, GHC.Types.Int) -> Types.Map -> Types.Map
+  {- Arity: 2, Strictness: <L,U(1*U(U),1*U(U))><S,1*U(U,U,1*U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int)) (w1 :: Types.Map) ->
+                 case w1 of ww { Types.Map ww1 ww2 ww3 ->
+                 Types.Map
+                   ww1
+                   ww2
+                   (Types.insert
+                      (case w of wild { (,) x ds1 -> x })
+                      (case w of wild { (,) ds1 y -> y })
+                      Types.createrowofoneobject2
+                      Types.createrowofoneobject1
+                      ww3) }) -}
+77cfe0af827530c448f2bb8e3d4ac4b0
+  insertwalls ::
+    [(GHC.Types.Int, GHC.Types.Int)] -> Types.Map -> Types.Map
+  {- Arity: 2, Strictness: <S,1*U><S,1*U(U,U,U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: [(GHC.Types.Int, GHC.Types.Int)]) (w1 :: Types.Map) ->
+                 case w1 of ww { Types.Map ww1 ww2 ww3 ->
+                 case Types.$winsertwalls
+                        w
+                        ww1
+                        ww2
+                        ww3 of ww4 { (#,,#) ww5 ww6 ww7 ->
+                 Types.Map ww5 ww6 ww7 } }) -}
+40bbcc898d1aeccc5136e8d1bb931ae2
+  kind :: Types.MapObject -> GHC.Types.Char
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLL),1*U(1*U(U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Types.MapObject) ->
+                 case ds of wild { Types.MapObject k ds1 ds2 ds3 -> k }) -}
+b5d835fda4e27eaa1e79aa464e8dcc70
+  mapfactory ::
+    GHC.Types.Int
+    -> GHC.Types.Int -> GHC.Types.Int -> [[Types.MapObject]]
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S(S),1*U(U)><L,U(U)>m2,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: GHC.Types.Int) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { GHC.Types.I# ww3 ->
+                 case Types.$wmapfactory ww1 ww3 w2 of ww4 { (#,#) ww5 ww6 ->
+                 GHC.Types.: @ [Types.MapObject] ww5 ww6 } } }) -}
+35e121c12e3090796d1af15cbb870679
+  n :: Types.Map -> GHC.Types.Int
+  RecSel Left Types.Map
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U(U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Types.Map) ->
+                 case ds of wild { Types.Map ds1 ds2 ds3 -> ds1 }) -}
+71655790de3c7daddbc1fc36b009ca11
+  objs :: Types.Map -> [[Types.MapObject]]
+  RecSel Left Types.Map
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Types.Map) ->
+                 case ds of wild { Types.Map ds1 ds2 ds3 -> ds3 }) -}
+f7f579abfefca3cfc51575e262773656
+  reversemap :: Types.Map -> Types.Map
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,1*U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Types.Map) ->
+                 case w of ww { Types.Map ww1 ww2 ww3 ->
+                 Types.Map
+                   ww1
+                   ww2
+                   (letrec {
+                      go3 :: [[Types.MapObject]] -> [[Types.MapObject]]
+                        {- Arity: 1, Strictness: <S,1*U> -}
+                      = \ (ds :: [[Types.MapObject]]) ->
+                        case ds of wild {
+                          [] -> GHC.Types.[] @ [Types.MapObject]
+                          : y ys
+                          -> GHC.Types.:
+                               @ [Types.MapObject]
+                               (GHC.List.reverse @ Types.MapObject y)
+                               (go3 ys) }
+                    } in
+                    go3 ww3) }) -}
+6bfe4cbb978f0a010c576f2e087bbe6b
+  rotate :: Types.Map -> GHC.Types.Char -> Types.Map
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(U,U,U)><S(S),1*U(1*U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Types.Map) (w1 :: GHC.Types.Char) ->
+                 case w of ww { Types.Map ww1 ww2 ww3 ->
+                 case w1 of ww4 { GHC.Types.C# ww5 ->
+                 case ww5 of ds {
+                   DEFAULT -> Types.Map ww1 ww2 ww3
+                   'h'#
+                   -> Types.Map
+                        ww1
+                        ww2
+                        (Data.OldList.transpose
+                           @ Types.MapObject
+                           (Types.rotate_go3
+                              (Data.OldList.transpose @ Types.MapObject (Types.rotate_go2 ww3))))
+                   'l'#
+                   -> Types.Map
+                        ww1
+                        ww2
+                        (Types.rotate_go1 (Data.OldList.transpose @ Types.MapObject ww3))
+                   'r'#
+                   -> Types.Map
+                        ww1
+                        ww2
+                        (Data.OldList.transpose
+                           @ Types.MapObject
+                           (Types.rotate_go ww3)) } } }) -}
+42c1d1db85ef00b7e2180b2498026d0b
+  rotate_go :: [[Types.MapObject]] -> [[Types.MapObject]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+b8aa923e2154423dc13dfb7a643ba4d9
+  rotate_go1 :: [[Types.MapObject]] -> [[Types.MapObject]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+4fc309367e7944b11a1aef781e450920
+  rotate_go2 :: [[Types.MapObject]] -> [[Types.MapObject]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+b863302f7fe6a8c99a0ff11604f26af3
+  rotate_go3 :: [[Types.MapObject]] -> [[Types.MapObject]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+51b5960428f2db2e8f69ce392ea262e5
+  transposemap :: Types.Map -> Types.Map
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,1*U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (map :: Types.Map) ->
+                 case map of wild { Types.Map ds ds1 ds2 ->
+                 Types.Map
+                   ds
+                   ds1
+                   (Data.OldList.transpose @ Types.MapObject ds2) }) -}
+e27b108860e5a5db4fe4a9f4c79c69aa
+  u :: Types.Map -> GHC.Types.Int
+  RecSel Left Types.Map
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Types.Map) ->
+                 case ds of wild { Types.Map ds1 ds2 ds3 -> ds2 }) -}
+88a84e6e3606585e1106e8bfdda5a709
+  xobj :: Types.MapObject -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLS),1*U(A,A,A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Types.MapObject) ->
+                 case ds of wild { Types.MapObject ds1 ds2 ds3 x -> x }) -}
+52f0e7e7b65a4ba016f9ab718c2e7575
+  yobj :: Types.MapObject -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSL),1*U(A,A,1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Types.MapObject) ->
+                 case ds of wild { Types.MapObject ds1 ds2 y ds3 -> y }) -}
+instance [safe] GHC.Classes.Eq [Types.MapObject]
+  = Types.$fEqMapObject
+instance [safe] GHC.Classes.Eq [Types.PositionList]
+  = Types.$fEqPositionList
+instance [safe] GHC.Show.Show [Types.Map] = Types.$fShowMap
+instance [safe] GHC.Show.Show [Types.MapObject]
+  = Types.$fShowMapObject
+instance [safe] GHC.Show.Show [Types.PositionList]
+  = Types.$fShowPositionList
+"SPEC/Types $fEq(,) @ Int @ Int" [ALWAYS] forall ($dEq :: GHC.Classes.Eq
+                                                            GHC.Types.Int)
+                                                 ($dEq1 :: GHC.Classes.Eq GHC.Types.Int)
+  GHC.Classes.$fEq(,) @ GHC.Types.Int @ GHC.Types.Int $dEq $dEq1
+  = Types.$s$fEq(,)
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

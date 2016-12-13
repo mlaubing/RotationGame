@@ -10,7 +10,7 @@ main :: IO()
 main = do
     hSetBuffering stdout NoBuffering
     putStrLn "Game started!"
-    mainmenu mymap (Step (0,0) End)
+    mainmenu mymap (Step (1,1) End)
     where rows    = 8
           cols    = 10
           player = (1,1)
